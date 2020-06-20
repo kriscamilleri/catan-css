@@ -1,0 +1,192 @@
+html{
+  --animation-duration: 0.2s
+}
+body{
+  overflow: hidden;
+}
+.hex-grid {
+  display: flex;
+  justify-content: center;
+}
+.hex-grid__list {
+  transform: rotate(90deg);
+  --amount: 5;
+  position: relative;
+  padding: 10%;
+  margin-top: -20%;
+  margin-right: 20%;
+  margin-left: 20%;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(var(--amount), 1fr 2fr) 1fr;
+  grid-gap: 1rem 2rem;
+  max-height: 100%;
+}
+.hex-grid__item {
+  transform:rotate(-90deg);
+  position: relative;
+  grid-column: 1/span 3;
+  grid-row: calc(var(--counter) + var(--counter))/span 2;
+  filter: drop-shadow(0 0 10px rgba(68, 68, 68, 0.08));
+  height: 0;
+  padding-bottom: 90%;
+}
+.hex-grid__content {
+  visibility: hidden;
+  transform:rotate(-90deg);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: red;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  transition: transform var(--animation-duration) ease-out;
+}
+.hex-grid__item{
+  filter: drop-shadow(0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2));
+  transition: filter var(--animation-duration) ease-in-out;
+
+}
+.hex-grid__item:hover{
+  filter: drop-shadow(0.1rem 0.4rem 0.2rem rgba(0, 0, 0, 0.2));
+  transition: filter var(--animation-duration) ease-in-out;
+}
+.hex-shown{
+  visibility: visible;
+  background-color: blue;
+}
+.hex-grid__item:hover .hex-shown{
+  transform: rotate(-90deg) scale(1.1);
+  visibility: visible;
+  background-color: blue;
+  transition: transform var(--animation-duration) ease-in-out;
+  cursor:pointer;
+}
+
+.hex-grid__item:active .hex-shown{
+  transform: rotate(-90deg) scale(0.95);
+  visibility: visible;
+  background-color: blue;
+  transition: transform var(--animation-duration) ease-in-out;
+}
+.hex-text{
+  transform: rotate(90deg)
+}
+  .hex-grid__list {
+    --amount: 5;
+    --counter: 4;
+  }
+  .hex-grid__item:nth-of-type(5n + 1) {
+    grid-column: 1/span 3;
+  }
+  .hex-grid__item:nth-of-type(5n + 2) {
+    grid-column: 3/span 3;
+    grid-row: calc(var(--counter) + var(--counter) - 1)/span 2;
+  }
+  .hex-grid__item:nth-of-type(5n + 3) {
+    grid-column: 5/span 3;
+  }
+  .hex-grid__item:nth-of-type(5n + 4) {
+    grid-column: 7/span 3;
+    grid-row: calc(var(--counter) + var(--counter) - 1)/span 2;
+  }
+  .hex-grid__item:nth-of-type(5n + 5) {
+    grid-column: 9/span 3;
+  }
+  .hex-grid__item:nth-of-type(n + 6) {
+    --counter: 2;
+  }
+  .hex-grid__item:nth-of-type(n + 11) {
+    --counter: 3;
+  }
+  .hex-grid__item:nth-of-type(n + 16) {
+    --counter: 4;
+  }
+  .hex-grid__item:nth-of-type(n + 21) {
+    --counter: 5;
+  }
+  .hex-grid__item:nth-of-type(n + 26) {
+    --counter: 6;
+  }
+  .hex-grid__item:nth-of-type(n + 31) {
+    --counter: 7;
+  }
+  .hex-grid__item:nth-of-type(n + 36) {
+    --counter: 8;
+  }
+  .hex-grid__item:nth-of-type(n + 41) {
+    --counter: 9;
+  }
+  .hex-grid__item:nth-of-type(n + 46) {
+    --counter: 10;
+  }
+  .hex-grid__item:nth-of-type(n + 51) {
+    --counter: 11;
+  }
+  .hex-grid__item:nth-of-type(n + 56) {
+    --counter: 12;
+  }
+  .hex-grid__item:nth-of-type(n + 61) {
+    --counter: 13;
+  }
+  .hex-grid__item:nth-of-type(n + 66) {
+    --counter: 14;
+  }
+  .hex-grid__item:nth-of-type(n + 71) {
+    --counter: 15;
+  }
+  .hex-grid__item:nth-of-type(n + 76) {
+    --counter: 16;
+  }
+  .hex-grid__item:nth-of-type(n + 81) {
+    --counter: 17;
+  }
+  .hex-grid__item:nth-of-type(n + 86) {
+    --counter: 18;
+  }
+  .hex-grid__item:nth-of-type(n + 91) {
+    --counter: 19;
+  }
+  .hex-grid__item:nth-of-type(n + 96) {
+    --counter: 20;
+  }
+  .hex-grid__item:nth-of-type(n + 101) {
+    --counter: 21;
+  }
+  .hex-grid__item:nth-of-type(n + 106) {
+    --counter: 22;
+  }
+  .hex-grid__item:nth-of-type(n + 111) {
+    --counter: 23;
+  }
+  .hex-grid__item:nth-of-type(n + 116) {
+    --counter: 24;
+  }
+  .hex-grid__item:nth-of-type(n + 121) {
+    --counter: 25;
+  }
+  .hex-grid__item:nth-of-type(n + 126) {
+    --counter: 26;
+  }
+  .hex-grid__item:nth-of-type(n + 131) {
+    --counter: 27;
+  }
+  .hex-grid__item:nth-of-type(n + 136) {
+    --counter: 28;
+  }
+  .hex-grid__item:nth-of-type(n + 141) {
+    --counter: 29;
+  }
+  .hex-grid__item:nth-of-type(n + 146) {
+    --counter: 30;
+  }
+  .hex-grid__item:nth-of-type(n + 151) {
+    --counter: 31;
+  }
